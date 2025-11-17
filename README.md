@@ -24,7 +24,7 @@ A sophisticated multi-agent AI governance system designed to audit and ensure co
 
 ## 🎯 Overview
 
-The **Agentic Governance Fabric (AGF)** is an AI governance platform that automates compliance auditing for AI systems against the EU AI Act. It uses a hierarchical multi-agent architecture where:
+The **Agentic Governance Fabric (AGF)** is an AI governance multi-agent model that automates compliance auditing for AI systems against the EU AI Act. It uses a hierarchical multi-agent architecture where:
 
 - A **Root Orchestrator Agent** manages the overall audit workflow
 - **Nine specialized Sub-Agents** conduct targeted compliance assessments
@@ -126,10 +126,24 @@ Agentic-Governance-Fabric-AGF-/
 
 ### Prerequisites
 
-- Python 3.9+
-- Google Cloud SDK
-- Google AI SDK (google-adk-agents)
-- Git
+
+1.  **Prerequisites**
+
+    *   Python 3.11+
+    *   Poetry
+        *   For dependency management and packaging. Please follow the
+            instructions on the official
+            [Poetry website](https://python-poetry.org/docs/) for installation.
+
+        ```bash
+        pip install poetry
+        ```
+
+    * A project on Google Cloud Platform
+    * Google Cloud CLI
+        *   For installation, please follow the instruction on the official
+            [Google Cloud website](https://cloud.google.com/sdk/docs/install).
+
 
 ### Installation
 
@@ -147,13 +161,38 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 3. **Install dependencies:**
 ```bash
-pip install -r requirements.txt
+poetry install
 ```
 
 4. **Configure environment variables:**
+
 ```bash
 cp .env.example .env
 # Edit .env with your API keys and configuration
+```
+
+    *   Authenticate your GCloud account.
+
+        ```bash
+        gcloud auth application-default login
+        gcloud auth application-default set-quota-project $GOOGLE_CLOUD_PROJECT
+        ```
+
+4. **Running the Agent:**
+ 
+
+**Using `adk`**
+
+Using the CLI:
+
+```bash
+poetry run adk run llm_auditor
+```
+
+Or on a web interface:
+
+```bash
+poetry run adk web
 ```
 
 ---
@@ -286,72 +325,34 @@ Each sub-agent enforces strict input requirements:
 
 ---
 
-## 📋 Requirements
 
-### Python Packages
-- `google-cloud-aiplatform` - Google Cloud AI services
-- `google-adk-agents` - Agent development kit
-- `python-dotenv` - Environment configuration
-- Additional dependencies listed in `requirements.txt`
 
-### API Access
-- Google Cloud Project with AI Platform enabled
-- Gemini API access
-- Appropriate service account credentials
+## Sample Conversations
 
----
+Below is the a part of the sample conversation with the agent regarding a system called DiagBot which is an AI that provides automated preliminary medical diagnoses based on patient symptoms and medical history.
 
-## 🔌 Configuration
+The conversation will carry on with the rest of the agents and can be found as one of the test cases: `Agentic-Governance-Fabric-AGF-/Requested Submissions/Testing/Test case 1`
 
-### Environment Variables (`.env`)
+![alt text](image.png)
 
-```env
-# Google Cloud Configuration
-GOOGLE_CLOUD_PROJECT=your-project-id
-GOOGLE_APPLICATION_CREDENTIALS=path/to/credentials.json
+## Deployment
+The AI Governace Agent can be deployed to Vertex AI Agent Engine using the following commands:
 
-# Gemini Configuration
-GEMINI_API_KEY=your-api-key
-GEMINI_MODEL=gemini-2.0-flash
+```
+poetry install --with deployment
+python3 deployment/deploy.py --create
+```
+When the deployment finishes, it will print a line like this:
 
-# Audit Configuration
-AUDIT_TIMEOUT=3600  # seconds
-AUDIT_LOG_LEVEL=INFO
+```
+Created remote agent: projects/<PROJECT_NUMBER>/locations/<PROJECT_LOCATION>/reasoningEngines/<AGENT_ENGINE_ID>
 ```
 
----
-
-## 💻 Usage
-
-### Basic Audit
-
-```python
-from eu_ai_act_auditor.agent import root_agent
-
-# Run audit with user-provided AI system information
-response = root_agent.generate_content("""
-Please audit my AI-powered recommendation system for EU AI Act compliance.
-System description: [Your system details]
-""")
-
-print(response.text)
+To delete the deployed agent, you may run the following command:
+```
+python3 deployment/deploy.py --delete --resource_id=${AGENT_ENGINE_ID}
 ```
 
-### With Custom Configuration
-
-```python
-from eu_ai_act_auditor.agent import root_agent
-
-audit_request = """
-System: Customer support chatbot
-Risk Profile: Medium (NLP-based, user interaction)
-Please conduct a full compliance audit.
-"""
-
-response = root_agent.generate_content(audit_request)
-```
-
----
 
 ## 🤝 Contributing
 
@@ -364,20 +365,14 @@ Contributions are welcome! Please follow these guidelines:
 5. Submit a pull request with detailed description
 
 ### Areas for Contribution
-- New sub-agent implementations
+---
+- Integration with GCP logs for automa
 - Enhanced risk assessment algorithms
 - Additional EU AI Act compliance domains
 - Improved documentation and examples
 - Performance optimizations
 
 ---
-
-## 📜 License
-
-This project is licensed under the MIT License. See LICENSE file for details.
-
----
-
 ## 📞 Support & Contact
 
 For issues, questions, or suggestions:
@@ -406,3 +401,4 @@ This governance framework is provided as-is for compliance assessment purposes. 
 **Last Updated**: November 2025  
 **Version**: 1.0.0  
 **Status**: Active Development
+
