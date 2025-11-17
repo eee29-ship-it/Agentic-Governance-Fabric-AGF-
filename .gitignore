@@ -1,2 +1,4 @@
 Agentic-Governance-Fabric-AGF-\eu_ai_act_auditor\.env
-Agentic-Governance-Fabric-AGF-\deployment\.env
+Agentic-Governance-Fabric-AGF-\deployment\.envgit
+deployment/.env
+eu_ai_act_auditor/.env
