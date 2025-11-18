@@ -1,4 +1,4 @@
-"""Deployment script for LLM Auditor."""
+"""Deployment script for AGF."""
 
 import os
 
@@ -23,7 +23,7 @@ flags.mark_bool_flags_as_mutual_exclusive(["create", "delete"])
 
 
 def create() -> None:
-    """Creates an agent engine for LLM Auditor."""
+    """Creates an agent engine for the Auditor."""
     adk_app = AdkApp(agent=root_agent, enable_tracing=True)
 
     remote_agent = agent_engines.create(
@@ -70,7 +70,8 @@ def main(argv: list[str]) -> None:
         FLAGS.location if FLAGS.location else os.getenv("GOOGLE_CLOUD_LOCATION")
     )
     bucket = (
-        FLAGS.bucket if FLAGS.bucket
+        FLAGS.bucket 
+        if FLAGS.bucket
         else os.getenv("GOOGLE_CLOUD_STORAGE_BUCKET")
     )
 

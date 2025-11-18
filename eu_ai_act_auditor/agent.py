@@ -1,6 +1,6 @@
 
 
-"""LLM Auditor for verifying AI agents against the EU AI Act."""
+"""Auditor for auditing AI agents against the EU AI Act and Deloitte Trustworthy governance framework."""
 
 from google.adk.agents import LlmAgent
 from google.adk.tools import agent_tool
