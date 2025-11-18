@@ -244,7 +244,7 @@ Key Findings: A conformity assessment has not been performed, which is a mandato
 Recommendations: The subagent recommends initiating and completing either an internal conformity assessment (Module A) or a third-party assessment by a Notified Body (Modules B+C or H), ensuring all relevant requirements of the EU AI Act are met and properly documented.
 
 
-## Step 9: Risk Conformity Assessment Subagent
+## Step 9: Post-Market Monitoring Subagent
 
 **Orchestrator Prompt:**  
 

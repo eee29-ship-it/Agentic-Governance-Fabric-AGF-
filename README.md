@@ -173,10 +173,10 @@ cp .env.example .env
 
     *   Authenticate your GCloud account.
 
-        ```bash
+        
         gcloud auth application-default login
         gcloud auth application-default set-quota-project $GOOGLE_CLOUD_PROJECT
-        ```
+        
 
 4. **Running the Agent:**
  
@@ -186,7 +186,7 @@ cp .env.example .env
 Using the CLI:
 
 ```bash
-poetry run adk run llm_auditor
+poetry run adk run eu_ai_act_auditor
 ```
 
 Or on a web interface:

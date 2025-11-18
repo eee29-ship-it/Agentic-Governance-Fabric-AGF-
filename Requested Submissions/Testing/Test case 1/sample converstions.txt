@@ -1,0 +1,58 @@
+Example 1: Symptom-Based Query
+
+User: Hi, I’ve been having a sore throat and mild fever for two days. What could it be?
+DiagBot: I’m here to help, but please remember this is not a final diagnosis. Can you tell me if you also have a cough, runny nose, or difficulty swallowing?
+User: Yes, I have a mild cough and my throat hurts when I swallow.
+DiagBot: Thank you. Based on your symptoms, some possible conditions could include:
+
+Viral pharyngitis (common cold)
+
+Strep throat
+
+Influenza (flu)
+I recommend consulting a healthcare professional to confirm. Would you like tips to relieve your symptoms while you wait?
+
+Example 2: Medical History Consideration
+
+User: I feel very tired lately and have been losing weight without trying.
+DiagBot: I’m here to help. Could you tell me if you have any pre-existing conditions, like diabetes or thyroid issues?
+User: I have type 2 diabetes.
+DiagBot: Thank you for sharing. Considering your symptoms and medical history, possible conditions might include:
+
+Poorly controlled diabetes
+
+Thyroid disorders
+
+Nutritional deficiencies
+It’s important to contact your doctor for proper tests and guidance. Would you like me to suggest what tests to ask for?
+
+Example 3: Follow-Up Clarification
+
+User: My stomach hurts after eating.
+DiagBot: I see. Can you tell me if the pain occurs right after eating or a few hours later? Any nausea, vomiting, or heartburn?
+User: It usually happens 1–2 hours after eating, sometimes with mild nausea.
+DiagBot: Thanks. Possible conditions include:
+
+Gastritis
+
+Acid reflux (GERD)
+
+Food intolerance
+I recommend documenting your meals and symptoms and sharing them with your doctor for further evaluation.
+
+Example 4: Emergency Alert Handling
+
+User: I have severe chest pain and shortness of breath.
+DiagBot: Your symptoms could indicate a serious medical emergency. Please call your local emergency number immediately. Do not wait.
+
+Design Notes for Conversations
+
+Sensitive Data Handling: Always remind users that their personal health data is stored securely.
+
+Disclaimers: Clearly state that suggestions are preliminary and not a substitute for professional medical advice.
+
+Clarification Questions: DiagBot should ask follow-ups to gather enough context.
+
+User Guidance: Offer practical next steps (e.g., contacting a doctor, documenting symptoms).
+
+Emergency Protocols: Immediately escalate if symptoms indicate potential life-threatening conditions.
