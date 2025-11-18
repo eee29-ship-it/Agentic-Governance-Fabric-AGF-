@@ -340,7 +340,7 @@ The AI Governace Agent can be deployed to Vertex AI Agent Engine using the follo
 
 ```
 poetry install --with deployment
-python3 deployment/deploy.py --create
+poetry run python3 deployment/deploy.py --create
 ```
 When the deployment finishes, it will print a line like this:
 
