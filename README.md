@@ -1,3 +1,23 @@
+<div align="center">
+
+# 🏆 Winner: Google x Deloitte Agentic AI Hackathon
+### 🥇 1st Place - Deloitte North & South Europe (NSE)
+
+</div>
+
+---
+
+### 👥 Team & Contributions
+
+This solution was engineered by the **eee29-ship-it** team. Below is the technical breakdown of contributions:
+
+* **Esraa Abelmotteleb (Team Captain):** Lead Architect & Developer. Responsible for developing the complete multi-agent system, coding the AI agents, and deploying the final solution to Agent Space.
+* **Zaid:** QA & Documentation. Responsible for system testing, writing the validation test cases, and authoring the repository documentation (README).
+* **Karim:** Quality Assurance. Responsible for system testing and validation.
+
+---
+
+
 # Agentic Governance Fabric (AGF) - EU AI Act Auditor
 
 A sophisticated multi-agent AI governance system designed to audit and ensure compliance of AI systems with the **EU AI Act**. This framework leverages specialized sub-agents to orchestrate comprehensive compliance assessments across multiple governance domains.
