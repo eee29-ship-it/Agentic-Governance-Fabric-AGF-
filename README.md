@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏆 Winner: Google x Deloitte Agentic AI Hackathon
+# 🏆 Winner: Google x Deloitte Agentic AI Hackathon Regional Round
 ### 🥇 1st Place - Deloitte North & South Europe (NSE)
 
 </div>
