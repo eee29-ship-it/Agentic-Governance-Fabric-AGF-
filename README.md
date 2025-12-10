@@ -12,7 +12,7 @@
 Below is the technical breakdown of contributions:
 
 * **Esraa Abelmotteleb (Team Captain):** Lead Architect & Developer. Responsible for developing the complete multi-agent system, coding the AI agents, and deploying the final solution to Agent Space.
-* **Zaid Said:** QA & Documentation. Responsible for system testing, writing the validation test cases, and authoring the repository documentation (README).
+* **Zaid Said:** QA & Documentation. Responsible for system testing, writing the validation test cases, and authoring the repository documentation.
 * **Karim Hesham:** Quality Assurance. Responsible for system testing and validation.
 
 ---
