@@ -1,10 +1,8 @@
 <div align="center">
 
 # 🏆 Global Winner: Google x Deloitte Agentic AI Hackathon Global Finale
-### 🥇 Innovation Award - Most innovative solution
-### 🥇 Top 3 on the globe
-
-# 🏆 Regional Winner: Google x Deloitte Agentic AI Hackathon Regional Round
+### 🥇 Innovation Award (Most Innovative Solution)
+### 🥇 Ranked Top 3 Globally
 ### 🥇 1st Place - Deloitte North & South Europe (NSE)
 
 </div>
